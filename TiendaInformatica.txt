@@ -1,0 +1,46 @@
+
+use tiendaInformatica
+'already on db tiendaInformatica'
+db.createCollection("articulos")
+
+
+db.articulos.insertOne({"nombre":"Disco duro", "precio":"80", "fabricante":"458112"})
+{ acknowledged: true,
+  insertedId: ObjectId("63603fa865e7a9dba0326d07") }
+db.articulos.insertOne({"nombre":"Repetidor de red wifi", "precio":"20", "fabricante":"845455"})
+{ acknowledged: true,
+  insertedId: ObjectId("636040ab65e7a9dba0326d08") }
+db.articulos.insertOne({"nombre":"Lector DNI", "precio":"11", "fabricante":"84848"})
+{ acknowledged: true,
+  insertedId: ObjectId("6360424365e7a9dba0326d09") }
+db.articulos.insertOne({"nombre":"Impresora Envy", "precio":"80", "fabricante":"31856"})
+{ acknowledged: true,
+  insertedId: ObjectId("636042be65e7a9dba0326d0a") }
+
+
+db.createCollection("fabricantes")
+[{
+  "_id": {
+    "$oid": "63577728f1bb1fb490c99b58"
+  },
+  "codigo": "458112",
+  "nombre": "Kingston"
+},{
+  "_id": {
+    "$oid": "63577af1f1bb1fb490c99b59"
+  },
+  "codigo": "845455",
+  "nombre": "Tp-link"
+},{
+  "_id": {
+    "$oid": "636015015938f2ec9385b794"
+  },
+  "codigo": "84848",
+  "nombre": "Trust"
+},{
+  "_id": {
+    "$oid": "63602ca75938f2ec9385b795"
+  },
+  "codigo": "31856",
+  "nombre": "HP"
+}]
